@@ -1,10 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "tailwind":"npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
+    "bootstrap-icons": "^1.13.1",
     "dotenv": "^17.4.0",
     "tailwindcss": "^4.2.2"
   }
