@@ -9,17 +9,17 @@
     @apply hidden items-center justify-between px-8 gap-4 font-semibold text-slate-600 md:flex;
   }
   .menu-links .active {
-    @apply text-blue-500 border-b-2 border-blue-500;
+    @apply text-slate-700 border-b-2 border-slate-700;
   }
   .card {
-    @apply bg-white h-80 rounded-2xl shadow-lg   border border-gray-200 max-w-[300px];
+    @apply bg-white h-80 rounded-2xl shadow-lg   border border-gray-200 w-[700px];
   }
 
   .btn {
     @apply flex items-center gap-2 text-white px-4 py-2 rounded  transition-colors active:scale-90;
   }
   .btn-primary {
-    @apply hover:bg-blue-500 bg-blue-600 text-white rounded;
+    @apply hover:bg-slate-600 bg-slate-700 text-white rounded;
   }
 
   .btn-secondary {
@@ -29,16 +29,16 @@
     @apply bg-gray-200 text-gray-500 px-3 py-1  text-sm;
   }
   .badge-primary {
-    @apply bg-blue-500 text-white;
+    @apply bg-slate-700 text-white;
   }
   .badge-secondary {
     @apply bg-gray-400/40 backdrop-blur-xl text-white;
   }
   .search-label {
-    @apply text-slate-600 text-[12px] font-bold uppercase;
+    @apply text-slate-600 text-[11px] md:text-[12px] font-bold uppercase;
   }
   .input {
-    @apply border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+    @apply border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-500;
   }
   .input-search {
     @apply bg-transparent border-none p-0 focus:ring-0 focus:outline-none focus:border-none 
@@ -59,23 +59,23 @@
 
 @layer utilities {
   .text-primary {
-    @apply text-blue-600;
+    @apply text-slate-700;
   }
   .flex-center {
     @apply flex items-center justify-center;
   }
   a.active {
-    @apply text-blue-500;
+    @apply text-slate-700;
   }
 }
 a.active svg {
-  @apply text-blue-500;
+  @apply text-slate-700;
 }
 a.active::after {
-  @apply bg-blue-500 w-40 flex items-center justify-center;
+  @apply bg-slate-700 w-40 flex items-center justify-center;
 }
 .bg-primary {
-  @apply bg-blue-500;
+  @apply bg-slate-700;
 }
 
 .bg-secondary {

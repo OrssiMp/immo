@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ImmoCool</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="shortcut icon"
       href="./src/assets/images/logo.jpg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./src/style/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-zinc-100 h-screen font-sans">
     <header class="flex flex-col">
@@ -26,28 +26,43 @@
             alt="logo de l'agence immoCool"
             width="50"
           />
-          <span class="text-3xl"> immoCool </span>
+          <span class="text-2xl md:text-3xl"> immoCool </span>
         </div>
         <ul class="menu-links">
-          <li class="active"><a href="#" class="" title="acceuil">Home</a></li>
-          <li><a href="#" class="" title="service">Service</a></li>
-          <li><a href="#" class="" title="apropos">À propos</a></li>
-          <li><a href="#" class="" title="contact">Contact</a></li>
+          <li class="active">
+            <a href="#" class="text-sm md:text-base" title="acceuil">Home</a>
+          </li>
+          <li>
+            <a href="#" class="text-sm md:text-base" title="service">Service</a>
+          </li>
+          <li>
+            <a href="#" class="text-sm md:text-base" title="apropos"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-sm md:text-base" title="contact">Contact</a>
+          </li>
         </ul>
-        <button type="button" class="btn btn-primary rounded-full">
-          <i class="bi bi-box-arrow-in-right md:text-1xl text-2xl"></i>
+        <button
+          type="button"
+          class="rounded-full px-4 py-2 bg-slate-900 text-white hover:bg-slate-800 transition flex items-center gap-2"
+        >
+          <span class="material-symbols-outlined md:text-2xl text-xl"
+            >login</span
+          >
           <span class="md:flex hidden">connexion</span>
         </button>
       </nav>
       <!-- section hero -->
       <section
         id="hero"
-        class="relative md:h-[921px] h-[600px] flex items-center justify-center overflow-hidden"
+        class="relative md:h-230.25 h-150 flex items-center justify-center overflow-hidden"
       >
         <div class="hero-img absolute inset-0 z-0">
           <img
             class="w-full h-full object-cover"
-            data-alt="luxury modern villa in Brazzaville Congo with infinity pool and palm trees at sunset with warm orange lighting"
+            alt="Villa de luxe moderne à Brazzaville Congo avec piscine à débordement et palmiers au coucher du soleil avec éclairage orange chaud"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvO_CLO7Hc1ARs1ugyuD6PBoNiq5neDWci1IKeby1Bmp8wHFDDodVdnmtyMuJhIR5o7Sh7_QkETZzOODnsVgF3VApXMU1-dVZphv_Hk4iWLsdFsvP_Aclpusu_K5C0tecEc8HLdEDTGWM6Oz43kryAngVWv2t7iZ-Lr9EoND6tbu0-zaYbXVZSWo1XxRJqPB4MSF0aiPNgIpog2Ss5uP2RtaihZMLgH8Q2C4WOdti1OA_CpiE7HqtOsILasWynrNRYDzV0sBZmV8c"
           />
         </div>
@@ -57,7 +72,7 @@
           </h1>
           <!-- search container -->
           <div
-            class="p-2 md:p-4 rounded-[2rem] mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4"
+            class="p-2 md:p-4 rounded-2xl mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4"
           >
             <div
               class="flex-1 flex flex-col items-start px-4 md:border-r-2 border-gray-400/30"
@@ -95,7 +110,9 @@
                 placeholder="FCFA"
               />
             </div>
-            <button class="btn-primary md:px-4 md:py-2 px-2 py-4">
+            <button
+              class="rounded-2xl bg-slate-900 text-white hover:bg-slate-800 transition px-6 py-3 md:px-4 md:py-2"
+            >
               Rechercher
             </button>
           </div>
@@ -110,45 +127,47 @@
           class="max-w-screen-2xl mx-auto px-12 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           <div class="text-center">
-            <div class="text-4xl font-extrabold text-primary mb-2">+1000</div>
+            <div class="text-3xl md:text-4xl font-extrabold text-primary mb-2">
+              +1000
+            </div>
             <div
-              class="text-outline font-label uppercase tracking-widest text-xs"
+              class="text-outline font-label uppercase tracking-widest text-xs md:text-sm"
             >
               Biens répertoriés
             </div>
           </div>
           <div class="text-center">
             <div
-              class="text-4xl font-headline font-extrabold text-primary mb-2"
+              class="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-2"
             >
               +500
             </div>
             <div
-              class="text-outline font-label uppercase tracking-widest text-xs"
+              class="text-outline font-label uppercase tracking-widest text-xs md:text-sm"
             >
               Clients satisfaits
             </div>
           </div>
           <div class="text-center">
             <div
-              class="text-4xl font-headline font-extrabold text-primary mb-2"
+              class="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-2"
             >
               12
             </div>
             <div
-              class="text-outline font-label uppercase tracking-widest text-xs"
+              class="text-outline font-label uppercase tracking-widest text-xs md:text-sm"
             >
               Villes couvertes
             </div>
           </div>
           <div class="text-center">
             <div
-              class="text-4xl font-headline font-extrabold text-primary mb-2"
+              class="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-2"
             >
               24h
             </div>
             <div
-              class="text-outline font-label uppercase tracking-widest text-xs"
+              class="text-outline font-label uppercase tracking-widest text-xs md:text-sm"
             >
               Réponse moyenne
             </div>
@@ -157,137 +176,82 @@
       </section>
       <!-- //stats -->
       <section id="product" class="flex flex-col justify-start px-4">
-        <!-- proprieties -->
-        <div class="w-full flex flex-col gap-2 p-8 m-4">
-          <h2 class="text-2xl font-bold">Propriétés de Prestige</h2>
-
-          <div class="flex items-center justify-between gap-2">
-            <p class="text-slate-600 text-lg w-1/2">
+        <!-- propriétés -->
+        <div
+          class="md:grid grid-cols-1 md:grid-cols-2 flex flex-col justify-center items-center gap-4"
+        >
+          <div>
+            <h2 class="text-xl md:text-2xl font-bold">
+              Propriétés de Prestige
+            </h2>
+            <p class="text-slate-600 text-base md:text-lg md:w-1/2">
               Une sélection exclusive des plus beaux biens immobiliers au Congo,
               soigneusement choisis pour vous.
             </p>
-            <span class="underline flex gap-2 text-primary">
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:justify-center justify-center items-center gap-3"
+          >
+            <span class="underline flex gap-2 text-primary items-center">
               voir tout les catalogues
-              <i
-                class="bi-arrow-right group-hover:translate-x-1 transition-transform"
-              ></i>
+              <span
+                class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-base"
+                >arrow_forward</span
+              >
             </span>
           </div>
         </div>
-        <div
-          class="container grid grid-cols-1 wwwmd:grid-col-3 gap-2"
-        >
-          <div class="overflow-hidden card">
-            <!-- IMAGE -->
-            <div class="relative h-2/3 w-full overflow-hidden">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GxCS9DTMXTJjXEQMWPbJp9pkLhRNxSLrZMQIGcBnFFZMeM3cZ0mN6hAef1jC7aYcOeWsD22Y3qIyEmU0sN1SCqRksM8eDrXqgG5azIIFRW2f5rd9L5qeEXvxmknnakBOEaY5mWjRp4MpdjkkT-t7QGldi211ygga7-yzonZZhR_KM83i9m6Epn9QQlkPi-vg9BPSLUPQlg9s-Ugy4rir42vmhtWbi-mSR5L_tEc5Y8cKNPrWToQvZ88xnYZqAjI-u0mWfn91zeU"
-                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-              />
-
-              <!-- BADGE TOP -->
-              <span
-                class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                Exclusivité
-              </span>
-
-              <!-- PRIX -->
-              <span
-                class="absolute bottom-4 left-4 bg-black/70 text-white text-sm font-bold px-4 py-2 rounded-lg"
-              >
-                450.000.000 FCFA
-              </span>
-            </div>
-
-            <!-- CONTENU -->
-            <div class="p-4 flex flex-col justify-between h-1/3">
-              <div>
-                <h3 class="text-lg font-bold">Penthouse Horizon</h3>
-                <p class="text-gray-500 text-sm flex items-center gap-1">
-                  <i class="bi bi-geo-alt"></i> Pointe-Noire, Centre-Ville
-                </p>
-              </div>
-              <div class="flex gap-2 items-center">
-
-              </div>
-            </div>
-          </div>
-          <div class="overflow-hidden card">
-            <!-- IMAGE -->
-            <div class="relative h-2/3 w-full overflow-hidden">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GxCS9DTMXTJjXEQMWPbJp9pkLhRNxSLrZMQIGcBnFFZMeM3cZ0mN6hAef1jC7aYcOeWsD22Y3qIyEmU0sN1SCqRksM8eDrXqgG5azIIFRW2f5rd9L5qeEXvxmknnakBOEaY5mWjRp4MpdjkkT-t7QGldi211ygga7-yzonZZhR_KM83i9m6Epn9QQlkPi-vg9BPSLUPQlg9s-Ugy4rir42vmhtWbi-mSR5L_tEc5Y8cKNPrWToQvZ88xnYZqAjI-u0mWfn91zeU"
-                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-              />
-
-              <!-- BADGE TOP -->
-              <span
-                class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                Exclusivité
-              </span>
-
-              <!-- PRIX -->
-              <span
-                class="absolute bottom-4 left-4 bg-black/70 text-white text-sm font-bold px-4 py-2 rounded-lg"
-              >
-                450.000.000 FCFA
-              </span>
-            </div>
-
-            <!-- CONTENU -->
-            <div class="p-4 flex flex-col justify-between h-1/3">
-              <div>
-                <h3 class="text-lg font-bold">Penthouse Horizon</h3>
-                <p class="text-gray-500 text-sm flex items-center gap-1">
-                  <i class="bi bi-geo-alt"></i> Pointe-Noire, Centre-Ville
-                </p>
-              </div>
-              <div class="flex gap-2 items-center">
-
-              </div>
-            </div>
-          </div>
-          <div class="overflow-hidden card">
-            <!-- IMAGE -->
-            <div class="relative h-2/3 w-full overflow-hidden">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GxCS9DTMXTJjXEQMWPbJp9pkLhRNxSLrZMQIGcBnFFZMeM3cZ0mN6hAef1jC7aYcOeWsD22Y3qIyEmU0sN1SCqRksM8eDrXqgG5azIIFRW2f5rd9L5qeEXvxmknnakBOEaY5mWjRp4MpdjkkT-t7QGldi211ygga7-yzonZZhR_KM83i9m6Epn9QQlkPi-vg9BPSLUPQlg9s-Ugy4rir42vmhtWbi-mSR5L_tEc5Y8cKNPrWToQvZ88xnYZqAjI-u0mWfn91zeU"
-                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-              />
-
-              <!-- BADGE TOP -->
-              <span
-                class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                Exclusivité
-              </span>
-
-              <!-- PRIX -->
-              <span
-                class="absolute bottom-4 left-4 bg-black/70 text-white text-sm font-bold px-4 py-2 rounded-lg"
-              >
-                450.000.000 FCFA
-              </span>
-            </div>
-
-            <!-- CONTENU -->
-            <div class="p-4 flex flex-col justify-between h-1/3">
-              <div>
-                <h3 class="text-lg font-bold">Penthouse Horizon</h3>
-                <p class="text-gray-500 text-sm flex items-center gap-1">
-                  <i class="bi bi-geo-alt"></i> Pointe-Noire, Centre-Ville
-                </p>
-              </div>
-              <div class="flex gap-2 items-center">
-
-              </div>
+        <!-- Grid -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+          <div>
+            <h3 class="text-base md:text-lg font-medium mb-3 text-gray-700">
+              Grid
+            </h3>
+            <div
+              id="product-grid"
+              class="grid grid-cols-1 md:grid-cols-3 gap-4"
+            >
+              <template id="template-ProductCard">
+                <article
+                  class="bg-white shadow-xl rounded-4xl overflow-hidden border border-slate-200 flex flex-col h-full"
+                >
+                  <div class="relative overflow-hidden h-72">
+                    <img
+                      class="card__image w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      alt=""
+                      src=""
+                    />
+                    <span
+                      class="card__badge absolute top-4 left-4 bg-amber-500 text-slate-200 font-semibold px-3 py-1 rounded-full uppercase shadow"
+                    ></span>
+                    <span
+                      class="card__price absolute bottom-4 left-4 bg-slate-900/85 text-white text-sm md:text-base font-semibold px-4 py-2 rounded-2xl shadow-lg"
+                    ></span>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="space-y-3">
+                      <h3
+                        class="card__title text-lg md:text-xl font-semibold text-slate-900"
+                      ></h3>
+                      <p
+                        class="card__localisation text-slate-500 text-xs  leading-none flex items-center gap-2"
+                      >
+                        <span
+                          class="material-symbols-outlined text-base"
+                          style="font-variation-settings: &quot;FILL&quot; 1"
+                          ></span
+                        >
+                        <span></span>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </template>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <script src="main.js"></script>
   </body>
 </html>
