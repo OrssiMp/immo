@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ImmoCool</title>
     <link
-      rel="shortcut icon"
-      href="./src/assets/images/logo.jpg"
-      type="image/x-icon"
+    rel="shortcut icon"
+    href="./src/assets/images/logo.jpg"
+    type="image/x-icon"
     />
     <link rel="stylesheet" href="./src/style/output.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+      />
+      <link rel="stylesheet" href="style.css" />
+    </head>
   <body class="bg-zinc-100 h-screen font-sans">
     <header class="flex flex-col">
       <nav class="navbar fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl">
@@ -57,10 +57,12 @@
           </h1>
           <!-- search container -->
           <div
-            class="p-2 md:p-4 rounded-sm mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4"
+          id="SearchContainer"
+            class="p-2 md:p-4 rounded-sm mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4 lg:divide-x-2  divide-gray-400/30
+            "
           >
             <div
-              class="flex-1 flex flex-col items-start px-4 md:border-r-2 border-gray-400/30"
+              class=" flex flex-col items-start px-4"
             >
               <label for="typeOfHouse" class="search-label">Type</label>
               <div class="relative">
@@ -81,7 +83,7 @@
               </div>
             </div>
             <div
-              class="flex-1 flex flex-col items-start justify-center px-4 md:border-r-2 border-gray-400/30"
+              class="flex-1 flex flex-col items-start justify-center px-4"
             >
               <label for="location" class="search-label">Localisation</label>
               <input
@@ -100,7 +102,7 @@
                 id="SelectPrice"
                 class="w-full input-search"
                 placeholder="FCFA"
-              />
+                />
             </div>
             <button class="btn-primary md:px-4 md:py-2 px-2 py-4">
               Rechercher
@@ -110,7 +112,7 @@
         </div>
       </section>
     </header>
-    <main class="h-screen">
+    <main class="">
       <!-- stats -->
       <section class="py-16 bg-zinc-300">
         <div
@@ -119,9 +121,9 @@
           <div class="text-center">
             <div class="text-4xl font-extrabold text-primary mb-2">+1000</div>
             <div
-              class="text-outline font-label uppercase tracking-widest text-xs"
+            class="text-outline font-label uppercase tracking-widest text-xs"
             >
-              Biens répertoriés
+            Biens répertoriés
             </div>
           </div>
           <div class="text-center">
@@ -188,7 +190,7 @@
             </span>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1  lg:grid-cols-3 gap-6 md:grid-cols-2">
           <div
             class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[500px] flex flex-col"
           >
@@ -357,7 +359,7 @@
         </h2>
         <!-- service cards -->
         <div
-          class="grid grid-cols-1  lg:grid-cols-3 gap-4 mt-8 px-4 py-2 items-center justify-items-center text-primary"
+          class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8 px-4 py-2 items-center justify-items-center text-primary"
         >
           <div
             class="rounded-lg bg-white shadow-sm size-85 flex flex-center flex-col space-y-5"
@@ -399,7 +401,7 @@
       <!-- section about -->
       <section
         id="about"
-        class="flex flex-col md:flex-row items-center bg-white/70 px-10 py-20 gap-15 mt-10"
+        class="flex flex-col lg:flex-row items-center bg-white/70 px-10 py-20 gap-15 mt-10"
       >
         <div class="flex-1 overflow-hidden">
           <img
@@ -409,7 +411,9 @@
           />
         </div>
         <div class="flex-1 space-y-8 p-4">
-          <h2 class="md:text-6xl mt-10 text-4xl font-bold text-slate-800">
+          <h2
+            class="lg:text-6xl mt-10 sm:text-4xl text-3xl font-bold text-slate-800"
+          >
             L'excellence au cœur de l'immobilier congolais.
           </h2>
           <p class="text-2xl mb-5">
@@ -447,28 +451,58 @@
       </section>
       <!-- section contact -->
       <section id="contact" class="p-10 bg-gray-300/70">
-        <div class="mx-auto bg-white rounded-2xl flex flex-center flex-col md:flex-row ">
-          <form action="" class="p-8 space-y-8 space-x-4 md:flex-1 mt-1h-full ">
-            <input type="text" placeholder="Nom complet" class="input md:w-60 w-full " />
-            <input type="text" placeholder="Email" class="input md:w-65 w-full" />
-            <input type="text" placeholder="sujet" class="input block md:w-130 w-full" />
-            <textarea name="message" id="message" class="input w-full md:w-3/4 h-40 resize-none"></textarea>
-            <button class="btn btn-primary active:scale-3d  md:w-full  text-center flex flex-center rounded">
-              Envoyer 
+        <div
+          class=" bg-white rounded-2xl flex  flex-col lg:flex-row"
+        >
+          <form action="" class="p-8 space-y-8 space-x-4 md:flex-1 mt-1h-full">
+            <div class="flex lg:flex-row flex-col gap-7 ">
+              <input
+                type="text"
+                placeholder="Nom complet"
+                class="input flex-1"
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                class="input flex-1"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="sujet"
+              class="input block md:w-[97%] w-full"
+            />
+            <textarea
+              name="message"
+              id="message"
+              class="input w-full md:w-3/4 h-40 resize-none"
+            ></textarea>
+            <button
+              class="btn btn-primary active:scale-3d md:w-full text-center flex flex-center rounded my-8"
+            >
+              Envoyer
             </button>
           </form>
           <!-- carte -->
-          <div class="md:flex-1 overflow-hidden">
+          <div class="md:flex-1 overflow-hidden bg-gray-200/70">
             <img
-              class="w-full h-full object-cover grayscale opacity-50"
-              data-alt="abstract city map of Brazzaville and Pointe-Noire with modern blue and grey color scheme"
-              data-location="Brazzaville"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBndwqjnjFfSkXJ4rTFu4Msux3DXaAjjGynJxZEDYX86u132MvF-wEqbEiyCSOL2GlVTRZ1J7y9hleVhDyHSd2BpEG0KOTR02UenM4EcWv8NQfBiN45idz3ZPD3PaXgDOgGdU4J5QU0V-HnT2ejSBYKlK7bx8KW67PM_818ZEj3dfdqtljJYe9MunrE-Dw8wD2uYymZRLmw5H31HIprPk7BxlADEOA6RLYSlM2v6ffQjjFqwRmAPdEyc66h1gLUOnPnndRFgXF_htk"
-            />
+  class="w-full h-full object-cover grayscale opacity-50"
+  alt="abstract map of Republic of the Congo blue grey style"
+  src="https://tse1.mm.bing.net/th/id/OIP.QierGmNfF4eIHhDnHFeDGQHaHa?pid=ImgDet&w=187&h=187&c=7&dpr=1.3&o=7&rm=3"
+/>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
   </body>
+  <footer class="bg-primary text-primary flex flex-center w-full  gap-1 size-80  ">
+    <div class="w-full size-full  bg-slate-950"">
+      1
+    </div>
+    <div class="w-full size-full  bg-slate-950">
+      2
+    </div>
+  </footer>
 </html>
+
+            <script src="script.js" defer></script>
