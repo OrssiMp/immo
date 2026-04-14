@@ -30,9 +30,9 @@
         </div>
         <ul class="menu-links">
           <li class="active"><a href="#" class="" title="acceuil">Home</a></li>
-          <li><a href="#" class="" title="service">Service</a></li>
-          <li><a href="#" class="" title="apropos">À propos</a></li>
-          <li><a href="#" class="" title="contact">Contact</a></li>
+          <li><a href="#service" class="" title="service">Service</a></li>
+          <li><a href="#about" class="" title="apropos">À propos</a></li>
+          <li><a href="#contact" class="" title="contact">Contact</a></li>
         </ul>
         <button type="button" class="btn btn-primary rounded-full">
           <i class="bi bi-box-arrow-in-right md:text-1xl text-2xl"></i>
@@ -52,26 +52,33 @@
           />
         </div>
         <div class="absolute inset-0 bg-black/30 flex-center flex-col">
-          <h1 class="text-white text-5xl md:text-7xl font-semibold">
+          <h1 class="text-white text-center text-5xl md:text-7xl font-semibold">
             Trouvez votre futur chez-vous
           </h1>
           <!-- search container -->
           <div
-            class="p-2 md:p-4 rounded-[2rem] mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4"
+            class="p-2 md:p-4 rounded-sm mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4"
           >
             <div
               class="flex-1 flex flex-col items-start px-4 md:border-r-2 border-gray-400/30"
             >
               <label for="typeOfHouse" class="search-label">Type</label>
-              <select
-                name="typeOfHouse"
-                id="typeOfHouse"
-                class="input-search text-slate-600"
-              >
-                <option value="appartement">Appartement</option>
-                <option value="terrain">Terrain</option>
-                <option value="villa">Villa</option>
-              </select>
+              <div class="relative">
+                <select
+                  name="typeOfHouse"
+                  id="typeOfHouse"
+                  class="text-slate-600 appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary cursor-pointer w-full"
+                >
+                  <option value="appartement">Appartement</option>
+                  <option value="terrain">Terrain</option>
+                  <option value="villa">Villa</option>
+                </select>
+                <div
+                  class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                >
+                  <i class="bi bi-chevron-down text-gray-500"></i>
+                </div>
+              </div>
             </div>
             <div
               class="flex-1 flex flex-col items-start justify-center px-4 md:border-r-2 border-gray-400/30"
@@ -156,18 +163,25 @@
         </div>
       </section>
       <!-- //stats -->
-      <section id="product" class="flex flex-col justify-start px-4">
+      <section id="product" class="flex flex-col p-8 bg-white/70">
         <!-- proprieties -->
-        <div class="w-full flex flex-col gap-2 p-8 m-4">
-          <h2 class="text-2xl font-bold">Propriétés de Prestige</h2>
-
-          <div class="flex items-center justify-between gap-2">
-            <p class="text-slate-600 text-lg w-1/2">
-              Une sélection exclusive des plus beaux biens immobiliers au Congo,
-              soigneusement choisis pour vous.
-            </p>
-            <span class="underline flex gap-2 text-primary">
-              voir tout les catalogues
+        <div class="w-full p-4 md:p-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8"
+          >
+            <div class="gap-2 text-center md:text-left">
+              <h2 class="text-2xl md:text-3xl font-bold">
+                Propriétés de Prestige
+              </h2>
+              <p class="text-slate-600 text-base md:text-lg max-w-md">
+                Une sélection exclusive des plus beaux biens immobiliers au
+                Congo, soigneusement choisis pour vous.
+              </p>
+            </div>
+            <span
+              class="underline flex items-center gap-2 text-primary cursor-pointer hover:text-primary/80 transition-colors"
+            >
+              voir tous les catalogues
               <i
                 class="bi-arrow-right group-hover:translate-x-1 transition-transform"
               ></i>
@@ -182,8 +196,8 @@
             <div class="relative h-64 w-full overflow-hidden">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GxCS9DTMXTJjXEQMWPbJp9pkLhRNxSLrZMQIGcBnFFZMeM3cZ0mN6hAef1jC7aYcOeWsD22Y3qIyEmU0sN1SCqRksM8eDrXqgG5azIIFRW2f5rd9L5qeEXvxmknnakBOEaY5mWjRp4MpdjkkT-t7QGldi211ygga7-yzonZZhR_KM83i9m6Epn9QQlkPi-vg9BPSLUPQlg9s-Ugy4rir42vmhtWbi-mSR5L_tEc5Y8cKNPrWToQvZ88xnYZqAjI-u0mWfn91zeU"
-                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                alt="Penthouse Horizon"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 group-hover:scale-110"
+                alt="ultra modern penthouse apartment balcony view with glass railings and city lights of Pointe-Noire at twilight"
               />
 
               <!-- BADGE TOP -->
@@ -221,7 +235,7 @@
                 </div>
               </div>
               <button
-                class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
+                class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 Voir détails
               </button>
@@ -233,14 +247,14 @@
             <!-- IMAGE -->
             <div class="relative h-64 w-full overflow-hidden">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GxCS9DTMXTJjXEQMWPbJp9pkLhRNxSLrZMQIGcBnFFZMeM3cZ0mN6hAef1jC7aYcOeWsD22Y3qIyEmU0sN1SCqRksM8eDrXqgG5azIIFRW2f5rd9L5qeEXvxmknnakBOEaY5mWjRp4MpdjkkT-t7QGldi211ygga7-yzonZZhR_KM83i9m6Epn9QQlkPi-vg9BPSLUPQlg9s-Ugy4rir42vmhtWbi-mSR5L_tEc5Y8cKNPrWToQvZ88xnYZqAjI-u0mWfn91zeU"
-                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                alt="Villa Moderne"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBlzW2kH7iU4oVsZNLv5zy7irc9vF_PknOEzGPVN0-U_232yIKeBWEb8hC6SBlOuXBpwtBEMdc8dflDMYafsJm4miZoWXModORyb8hONwmBCq5J_PtuN0pOyMROCsaR-8UvDMnyAZfNT1pE7vgaWKRBdD-X67hb1f084o59cooU1IwghKNwXMttOsHd44UpOigTN_fET9SpPm8k0OueTvC4Ch9sY7KRp3u8wY2lXtJB_WigRvmlcWwP4kfDTYIlS7ew4G24LV0xOQ"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 group-hover:scale-110"
+                alt="contemporary family villa with large floor to ceiling windows and manicured garden in Brazzaville residential area"
               />
 
               <!-- BADGE TOP -->
               <span
-                class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
+                class="absolute top-4 left-4 bg-emerald-800/70 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
               >
                 Nouveau
               </span>
@@ -273,7 +287,7 @@
                 </div>
               </div>
               <button
-                class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
+                class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 Voir détails
               </button>
@@ -285,14 +299,14 @@
             <!-- IMAGE -->
             <div class="relative h-64 w-full overflow-hidden">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GxCS9DTMXTJjXEQMWPbJp9pkLhRNxSLrZMQIGcBnFFZMeM3cZ0mN6hAef1jC7aYcOeWsD22Y3qIyEmU0sN1SCqRksM8eDrXqgG5azIIFRW2f5rd9L5qeEXvxmknnakBOEaY5mWjRp4MpdjkkT-t7QGldi211ygga7-yzonZZhR_KM83i9m6Epn9QQlkPi-vg9BPSLUPQlg9s-Ugy4rir42vmhtWbi-mSR5L_tEc5Y8cKNPrWToQvZ88xnYZqAjI-u0mWfn91zeU"
-                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                alt="Appartement Cosy"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC42VLKKcO_E9E2dlk-JGXh7Uubgx8WN7unHoE2NqgnUKNjREECGyP596cuhSfXi3RmddecXDxx0d6Tjvt_1w-gJ5wrdKW23ROer-SQP13Im2cuFE0vEtkiVZzF-duq-m4v2Fvv1F1cRNW5b8PZyg3gQ0rDkQBrH1FxauaPCgRENgp7QgO83b0Gw1ev2unQk8yHcLenUUQI1WT2j6pjB1j8Mz_5YRXKpRWYlNKz-0WQ3Ms4aXPrR1kjQ56WG_63-Gjc9kUw_pRIzaA"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 group-hover:scale-110"
+                alt="minimalist architectural villa design with clean lines and white concrete facade under clear blue sky"
               />
 
               <!-- BADGE TOP -->
               <span
-                class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
+                class="absolute top-4 left-4 bg-orange-600/70 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
               >
                 Promo
               </span>
@@ -301,12 +315,12 @@
               <span
                 class="absolute bottom-4 left-4 bg-black/70 text-white text-sm font-bold px-4 py-2 rounded-lg"
               >
-                180.000.000 FCFA
+                180.000.000 FCFA / louer
               </span>
             </div>
 
             <!-- CONTENU -->
-            <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="p-6 flex flex-col justify-between grow">
               <div>
                 <h3 class="text-xl font-bold mb-2">Appartement Cosy</h3>
                 <p class="text-gray-500 text-sm flex items-center gap-1 mb-4">
@@ -325,11 +339,132 @@
                 </div>
               </div>
               <button
-                class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
+                class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 Voir détails
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- service -->
+      <section id="service" class="mt-10 text-center">
+        <h2 class="text-gray-800 md:text-3xl font-bold text-2xl py-2">
+          Une solution pour chaque projet
+          <span
+            class="block mx-auto w-25 h-1.5 bg-primarry mt-3 rounded"
+          ></span>
+        </h2>
+        <!-- service cards -->
+        <div
+          class="grid grid-cols-1  lg:grid-cols-3 gap-4 mt-8 px-4 py-2 items-center justify-items-center text-primary"
+        >
+          <div
+            class="rounded-lg bg-white shadow-sm size-85 flex flex-center flex-col space-y-5"
+          >
+            <i class="bi bi-house-door text-5xl md:text-6xl"></i>
+            <h3 class="text-xl md:text-3xl font-bold">Acheter</h3>
+            <p class="p-2">
+              Accédez aux meilleures offres du marché immobilier congolais avec
+              un accompagnement juridique complet.
+            </p>
+            <a href="" class="underline font-semibold"> Découvrir les biens </a>
+          </div>
+          <div
+            class="rounded-lg bg-white shadow-sm size-85 flex flex-center flex-col space-y-5"
+          >
+            <i class="bi bi-tag-fill text-5xl md:text-6xl"></i>
+            <h3 class="text-xl md:text-3xl font-bold">Vendre</h3>
+            <p class="p-2">
+              Vendez votre propriété au meilleur prix grâce à notre réseau
+              d'investisseurs qualifiés.
+            </p>
+            <a href="" class="underline font-semibold mt-3.5">
+              Estimer mon bien
+            </a>
+          </div>
+          <div
+            class="rounded-lg bg-white shadow-sm size-85 flex flex-center flex-col space-y-5"
+          >
+            <i class="bi bi-key-fill text-5xl md:text-6xl"></i>
+            <h3 class="text-xl md:text-3xl font-bold">Louer</h3>
+            <p class="p-2">
+              Trouvez rapidement une location qui correspond à votre style de
+              vie et à votre budget.
+            </p>
+            <a href="" class="underline font-semibold">Voir les locations</a>
+          </div>
+        </div>
+      </section>
+      <!-- section about -->
+      <section
+        id="about"
+        class="flex flex-col md:flex-row items-center bg-white/70 px-10 py-20 gap-15 mt-10"
+      >
+        <div class="flex-1 overflow-hidden">
+          <img
+            class="rounded-xl relative z-10 ambient-shadow size-140 object-cover hover:scale-110 transition-transform duration-700"
+            data-alt="luxury hotel entrance in Brazzaville with modern African architectural details and lush landscaping"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsuOqNMnpLc_ZjqKxkAeqymxLpCQoWrTuI3VgA-palFrWQMThIB0511cht6k2YnQBHM68a9qRpRZv7BFYCCQokvwWNFIABpdo7ZBHIrrlRYtLKrEGMlCRQ43VzMRF2r2N--YO3BTVqtNbRHU_UMOc8UJf5HViZ63-CyeRd2z3e7RFvFzvUil_wphuNzTw_Ha0FVdbpwrUu5gDet40YvaUyj6TvnF_ihGvXRMQbC4CebU5LKSwvHHhxg2H80eJlJFnF3W2tUKlXzzk"
+          />
+        </div>
+        <div class="flex-1 space-y-8 p-4">
+          <h2 class="md:text-6xl mt-10 text-4xl font-bold text-slate-800">
+            L'excellence au cœur de l'immobilier congolais.
+          </h2>
+          <p class="text-2xl mb-5">
+            ImmoCool redéfinit les standards de l'immobilier au Congo. Plus
+            qu'une simple plateforme, nous sommes votre partenaire privilégié
+            pour bâtir votre patrimoine. Notre expertise locale alliée à des
+            standards internationaux vous garantit une expérience sereine et
+            transparente.
+          </p>
+          <div>
+            <div class="flex items-center gap-4 p-2 text-primary">
+              <i
+                class="bi bi-patch-check md:text-4xl bg-gray-200/80 rounded-lg p-2"
+              ></i>
+              <p class="font-extralight">
+                <span class="block md:text-lg font-normal">
+                  Annonces vérifiées
+                </span>
+                Chaque bien est rigoureusement contrôlé par nos agents.
+              </p>
+            </div>
+            <div class="flex items-center gap-4 p-2 text-primary">
+              <i
+                class="bi bi-patch-check md:text-4xl bg-gray-200/80 rounded-lg p-2"
+              ></i>
+              <p class="font-extralight">
+                <span class="block font-normal md:text-lg">
+                  Assistance Juridique
+                </span>
+                Un notaire dédié pour safegarder toutes vos transactions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section contact -->
+      <section id="contact" class="p-10 bg-gray-300/70">
+        <div class="mx-auto bg-white rounded-2xl flex flex-center flex-col md:flex-row ">
+          <form action="" class="p-8 space-y-8 space-x-4 md:flex-1 mt-1h-full ">
+            <input type="text" placeholder="Nom complet" class="input md:w-60 w-full " />
+            <input type="text" placeholder="Email" class="input md:w-65 w-full" />
+            <input type="text" placeholder="sujet" class="input block md:w-130 w-full" />
+            <textarea name="message" id="message" class="input w-full md:w-3/4 h-40 resize-none"></textarea>
+            <button class="btn btn-primary active:scale-3d  md:w-full  text-center flex flex-center rounded">
+              Envoyer 
+            </button>
+          </form>
+          <!-- carte -->
+          <div class="md:flex-1 overflow-hidden">
+            <img
+              class="w-full h-full object-cover grayscale opacity-50"
+              data-alt="abstract city map of Brazzaville and Pointe-Noire with modern blue and grey color scheme"
+              data-location="Brazzaville"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBndwqjnjFfSkXJ4rTFu4Msux3DXaAjjGynJxZEDYX86u132MvF-wEqbEiyCSOL2GlVTRZ1J7y9hleVhDyHSd2BpEG0KOTR02UenM4EcWv8NQfBiN45idz3ZPD3PaXgDOgGdU4J5QU0V-HnT2ejSBYKlK7bx8KW67PM_818ZEj3dfdqtljJYe9MunrE-Dw8wD2uYymZRLmw5H31HIprPk7BxlADEOA6RLYSlM2v6ffQjjFqwRmAPdEyc66h1gLUOnPnndRFgXF_htk"
+            />
           </div>
         </div>
       </section>
