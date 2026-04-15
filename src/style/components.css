@@ -6,7 +6,7 @@
     @apply flex items-center justify-between px-8 shadow-sm h-20;
   }
   .menu-links {
-    @apply hidden items-center justify-between px-8 gap-4 font-semibold text-slate-600 md:flex;
+    @apply hidden items-center justify-between px-8 gap-4 font-semibold text-slate-600 xs:flex;
   }
   .menu-links .active {
     @apply text-slate-700 border-b-2 border-slate-700;
