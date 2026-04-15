@@ -1,3 +1,7 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 @layer components {
   .brand {
     @apply font-bold text-gray-700 flex gap-2 items-center justify-center;
@@ -6,10 +10,13 @@
     @apply flex items-center justify-between px-8 shadow-sm h-20;
   }
   .menu-links {
-    @apply hidden items-center justify-between px-8 gap-4 font-semibold text-slate-600 xs:flex;
+    @apply hidden items-center justify-between px-8 gap-4 font-semibold text-slate-600 md:flex;
   }
   .menu-links .active {
     @apply text-slate-700 border-b-2 border-slate-700;
+  }
+  .bottom-bar {
+    @apply w-full flex items-center justify-center py-2 px-8 gap-5 fixed z-20 bottom-0 md:hidden ;
   }
   .card {
     @apply bg-white h-80 rounded-2xl shadow-lg   border border-gray-200 w-[700px];
