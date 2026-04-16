@@ -16,6 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="main.js" defer></script>
   </head>
   <body class="bg-zinc-100 h-screen font-sans relative">
     <header class="flex flex-col" id="home">
@@ -36,9 +38,12 @@
           <li><a href="#contact" class="" title="contact">Contact</a></li>
         </ul>
         <div class="flex gap-4 flex-center md:flex hidden">
-          <button type="button" class="btn btn-primary rounded-full md:flex hidden">
-            <i class="bi-person-fill md:text-1xl  text-2xl"></i>
-            <span class="md:flex hidden ">Mon Compte</span>
+          <button
+            type="button"
+            class="btn btn-primary rounded-full md:flex hidden"
+          >
+            <i class="bi-person-fill md:text-1xl text-2xl"></i>
+            <span class="md:flex hidden">Mon Compte</span>
           </button>
         </div>
       </nav>
@@ -61,7 +66,7 @@
           <!-- search container -->
           <div
             id="SearchContainer"
-            class="p-2 md:p-4 rounded-sm mt-8 ambient-shadow flex flex-col md:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4 lg:divide-x-2 divide-gray-400/30"
+            class="p-2 md:p-4 rounded-sm mt-8 ambient-shadow flex flex-col lg:flex-row items-stretch gap-6 md:gap-4 max-w-4xl mx-auto bg-white w-3/4 lg:divide-x-2 divide-gray-400/30"
           >
             <div class="flex flex-col items-start px-4">
               <label for="typeOfHouse" class="search-label">Type</label>
@@ -70,6 +75,7 @@
                   name="typeOfHouse"
                   id="typeOfHouse"
                   class="text-slate-600 appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary cursor-pointer w-full"
+                  required
                 >
                   <option value="appartement">Appartement</option>
                   <option value="terrain">Terrain</option>
@@ -90,6 +96,7 @@
                 id="location"
                 class="input-search"
                 placeholder="Brazzaville, PN..."
+                required
               />
             </div>
             <div class="flex-1 flex flex-col items-start justify-center px-4">
@@ -100,6 +107,9 @@
                 id="SelectPrice"
                 class="w-full input-search"
                 placeholder="FCFA"
+                pattern="[0-9]+"
+                title="Veuillez entrer uniquement des chiffres"
+                required
               />
             </div>
             <button class="btn-primary md:px-4 md:py-2 px-2 py-4">
@@ -371,7 +381,7 @@
             <a href="" class="underline font-semibold"> Découvrir les biens </a>
           </div>
           <div
-            class="service-card  rounded-lg bg-white shadow-sm md:size-85 flex flex-center flex-col space-y-5 w-auto md:p-0 py-6 px-4"
+            class="service-card rounded-lg bg-white shadow-sm md:size-85 flex flex-center flex-col space-y-5 w-auto md:p-0 py-6 px-4"
           >
             <i class="bi-tag-fill text-5xl md:text-6xl"></i>
             <h3 class="text-xl md:text-3xl font-bold">Vendre</h3>
@@ -450,26 +460,67 @@
       <!-- section contact -->
       <section id="contact" class="p-10 bg-gray-300/70">
         <div class="bg-white rounded-2xl flex flex-col lg:flex-row">
-          <form action="" class="p-8 space-y-8 space-x-4 md:flex-1 mt-1h-full">
+          <form
+            action=""
+            id="form"
+            class="p-8 space-y-8 space-x-4 md:flex-1 mt-1h-full"
+          >
             <div class="flex lg:flex-row flex-col gap-7">
               <input
+                id="name"
                 type="text"
                 placeholder="Nom complet"
                 class="input flex-1"
+                required
               />
-              <input type="text" placeholder="Email" class="input flex-1" />
+              <span
+                class="text-sm text-gray-500 peer-invalid:text-red-500 peer-invalid:block peer-focus:text-amber-400 hidden"
+              >
+                Assuser vous d'insérer un nom valide .
+                <i class="bi-x-lg"></i>
+              </span>
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                class="input flex-1 peer"
+                required
+              />
+              <span
+                class="text-sm text-gray-500 peer-invalid:text-red-500 peer-invalid:block peer-focus:text-amber-400 hidden"
+              >
+                Assuser vous d'insérer une adresse email valide .
+                <i class="bi-x-lg"></i>
+              </span>
             </div>
             <input
+              id="subject"
               type="text"
               placeholder="sujet"
               class="input block md:w-[97%] w-full"
+              required
             />
+            <span
+              class="text-sm text-gray-500 peer-invalid:text-red-500 peer-invalid:block peer-focus:text-amber-400 hidden"
+            >
+              Assuser vous d'insérer un sujet valide .
+              <i class="bi-x-lg"></i>
+            </span>
             <textarea
               name="message"
               id="message"
               class="input w-full md:w-3/4 h-40 resize-none"
+              required
             ></textarea>
+            <span
+              class="text-sm text-gray-500 peer-invalid:text-red-500 peer-invalid:block peer-focus:text-amber-400 hidden"
+            >
+              Assuser vous d'insérer un message valide, au minimum 10 caractères
+              .
+              <i class="bi-x-lg"></i>
+            </span>
             <button
+              type="submit"
               class="btn btn-primary active:scale-3d md:w-full text-center flex flex-center rounded my-8"
             >
               Envoyer
@@ -595,6 +646,7 @@
             class="bg-slate-900 border-none rounded-l-lg p-3 w-full text-white text-sm focus:ring-0"
             placeholder="Email"
             type="email"
+            required
           />
           <button
             class="bi-send bg-primary px-4 rounded-r-lg hover:bg-primary-container transition-all"
@@ -620,5 +672,3 @@
     </div>
   </footer>
 </html>
-
-
