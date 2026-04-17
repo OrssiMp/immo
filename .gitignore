@@ -5,3 +5,5 @@ node_modules/
 .env
 old
 dev
+database
+future
