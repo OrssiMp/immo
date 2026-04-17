@@ -1,14 +1,16 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Technologies utilisées
 
 ### Frontend
 
-- HTML5 sémantique
+- HTML5 sémantique [![HTMLlogo](https://www.w3.org/html/logo/)](https://www.w3.org/html/logo/)
 - TailwindCSS pour le style
 - JavaScript ES6+ avec modules
 - SweetAlert2 pour les notifications
 - Bootstrap Icons pour les icônes
 
-### Backend
+### Backend / en développement
 
 - Node.js avec serveur HTTP natif
 - Gestion des fichiers statiques
@@ -126,6 +128,33 @@ cd immo
 **Contenu :** Métadonnées du Finder macOS  
 **Utilité :** Aucune - ignoré automatiquement
 
-## Situation de dedéveloppement
+## Situation de développement
 
-Immocool est en cours de développement certains fonctionnalités sont encore en cas d'étude et passe une sous une analyse afin d'en tirer meilleur partie , d'où la préscence d'un dossier .dev ignorer pour qui contient les fonctionnalités qui sont en développement et en jugement et un dossier future qui contient les futures scripts à intégrer après que certaines conditions soient remplies
+Immocool est en cours de développement certains fonctionnalités sont encore en cas d'étude et passe sous une analyse afin d'en tirer meilleur partie , d'où la préscence d'un dossier .dev, future ,database dans le gitgnore pour qui contient les fonctionnalités qui sont en développement et en jugement et un dossier future qui contient les futures scripts à intégrer après que certaines conditions soient remplies
+
+## 🤝 Contributeurs
+
+# Comment devenir **Contributeurs**
+
+- Forker le projet
+- Créer une branche feature
+- Faire des commits
+- Pousser la branche
+- Ouvrir une Pull Request
+
+
+### Steve Bayonne - Développeur principal
+
+<img src="https://avatars.githubusercontent.com/u/193019295?v=4" alt="Steve Bayonne" width="50" height="50" style="border-radius: 50%;">
+
+- **Rôle :** Développeur principal
+- **GitHub :** [@stevebay0605](https://github.com/stevebay0605)
+- **Contributions :** Architecture du projet, développement frontend, développeur de la version 1
+
+### Orssi MP - Développeur secondaire
+
+<img src="https://avatars.githubusercontent.com/OrssiMP" alt="Orssi MP" width="50" height="50" style="border-radius: 50%;">
+
+- **Rôle :** Développeur secondaire
+- **GitHub :** [@OrssiMP](https://github.com/OrssiMP)
+- **Contributions :** Support technique, documentation, optimisation des performances, intégration SweetAlert
