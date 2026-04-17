@@ -60,6 +60,10 @@ git clone [repository-url]
 cd immo
 ```
 
+```node
+npm install
+```
+
 2. Démarrez le live serveur
 
 ## Architecture des dossiers ignorés
@@ -141,7 +145,6 @@ Immocool est en cours de développement certains fonctionnalités sont encore en
 - Faire des commits
 - Pousser la branche
 - Ouvrir une Pull Request
-
 
 ### Steve Bayonne - Développeur principal
 
